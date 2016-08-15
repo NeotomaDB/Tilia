@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Tue Jul 26 2016 14:47:38 GMT-0700 (Pacific Daylight Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="TiliaFile">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="Version">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Application" type="xs:string"></xs:element>
+                                             <xs:element name="MajorVersion" type="xs:int"></xs:element>
+                                             <xs:element name="MinorVersion" type="xs:int"></xs:element>
+                                             <xs:element name="Release" type="xs:int"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Contacts">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Contact" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="NeotomaContactID" type="xs:int"></xs:element>
+                                                               <xs:element name="NeotomaAliasID" type="xs:int"></xs:element>
+                                                               <xs:element name="FullContactName" type="xs:string"></xs:element>
+                                                               <xs:element name="ShortContactName" type="xs:string"></xs:element>
+                                                               <xs:element name="FamilyName" type="xs:string"></xs:element>
+                                                               <xs:element name="GivenNames" type="xs:string"></xs:element>
+                                                               <xs:element name="LeadingInitials" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                         <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Publications">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Publication" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="PublicationType" type="xs:string"></xs:element>
+                                                               <xs:element name="NeotomaID" type="xs:int"></xs:element>
+                                                               <xs:element name="PublicationYear" type="xs:int"></xs:element>
+                                                               <xs:element name="Citation" type="xs:string"></xs:element>
+                                                               <xs:element name="Authors">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Author">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="Contact">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="LastName" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="Initials" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Title" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                         <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="Primary" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="SpreadSheetBook">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="SpreadSheetOptions">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="HeaderRow" type="xs:int"></xs:element>
+                                                               <xs:element name="FontName" type="xs:string"></xs:element>
+                                                               <xs:element name="FontSize" type="xs:int"></xs:element>
+                                                               <xs:element name="DefaultColWidth" type="xs:int"></xs:element>
+                                                               <xs:element name="DefaultRowHeight" type="xs:int"></xs:element>
+                                                               <xs:element name="PercentDecimalPlaces" type="xs:int"></xs:element>
+                                                               <xs:element name="CheckDupCodes" type="xs:string"></xs:element>
+                                                               <xs:element name="CaseSensitiveCodes" type="xs:string"></xs:element>
+                                                               <xs:element name="CodesVisible" type="xs:string"></xs:element>
+                                                               <xs:element name="ElementsVisible" type="xs:string"></xs:element>
+                                                               <xs:element name="UnitsVisible" type="xs:string"></xs:element>
+                                                               <xs:element name="ContextsVisible" type="xs:string"></xs:element>
+                                                               <xs:element name="TaphonomyVisible" type="xs:string"></xs:element>
+                                                               <xs:element name="GroupsVisible" type="xs:string"></xs:element>
+                                                               <xs:element name="GroupCategories">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="GroupCategory" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="SpreadSheet">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Col" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="cell" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="text" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                             <xs:attribute name="row" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                           <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="Width" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                         <xs:attribute name="page" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="name" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Site">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="SiteName" type="xs:string"></xs:element>
+                                             <xs:element name="LongEast" type="xs:double"></xs:element>
+                                             <xs:element name="LongWest" type="xs:double"></xs:element>
+                                             <xs:element name="LatNorth" type="xs:double"></xs:element>
+                                             <xs:element name="LatSouth" type="xs:double"></xs:element>
+                                             <xs:element name="Altitude" type="xs:int"></xs:element>
+                                             <xs:element name="Area" type="xs:int"></xs:element>
+                                             <xs:element name="Country" type="xs:string"></xs:element>
+                                             <xs:element name="State" type="xs:string"></xs:element>
+                                             <xs:element name="County" type="xs:string"></xs:element>
+                                             <xs:element name="AdminUnit" type="xs:string"></xs:element>
+                                             <xs:element name="SiteDescription" type="xs:string"></xs:element>
+                                             <xs:element name="Notes" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="CollectionUnit">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Handle" type="xs:string"></xs:element>
+                                             <xs:element name="CollectionName" type="xs:string"></xs:element>
+                                             <xs:element name="CollectionType" type="xs:string"></xs:element>
+                                             <xs:element name="CollectionDevice" type="xs:string"></xs:element>
+                                             <xs:element name="Collectors">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Contact">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="CollectionDate" type="xs:int"></xs:element>
+                                             <xs:element name="Location" type="xs:string"></xs:element>
+                                             <xs:element name="DepositionalEnvironment" type="xs:string"></xs:element>
+                                             <xs:element name="Substrate" type="xs:string"></xs:element>
+                                             <xs:element name="SlopeAngle" type="xs:int"></xs:element>
+                                             <xs:element name="SlopeAspect" type="xs:int"></xs:element>
+                                             <xs:element name="WaterDepth" type="xs:int"></xs:element>
+                                             <xs:element name="Notes" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Datasets">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Dataset">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="DatasetType" type="xs:string"></xs:element>
+                                                               <xs:element name="Name" type="xs:string"></xs:element>
+                                                               <xs:element name="Notes" type="xs:string"></xs:element>
+                                                               <xs:element name="IsSSamp" type="xs:string"></xs:element>
+                                                               <xs:element name="IsAggregate" type="xs:string"></xs:element>
+                                                               <xs:element name="Investigators">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Contact" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Processors">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Contact">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Publications">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Publication">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Repositories">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Repository">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="Acronym" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="Repository" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="GeochronDataset">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Investigators">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Contact" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="Geochronology">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="GeochronSample" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Method" type="xs:string"></xs:element>
+                                                                                 <xs:element name="AgeUnits" type="xs:string"></xs:element>
+                                                                                 <xs:element name="AnalysisUnit" type="xs:string"></xs:element>
+                                                                                 <xs:element name="LabNumber" type="xs:string"></xs:element>
+                                                                                 <xs:element name="Age" type="xs:int"></xs:element>
+                                                                                 <xs:element name="ErrorOlder" type="xs:int"></xs:element>
+                                                                                 <xs:element name="ErrorYounger" type="xs:int"></xs:element>
+                                                                                 <xs:element name="Sigma" type="xs:int"></xs:element>
+                                                                                 <xs:element name="StdDev" type="xs:int"></xs:element>
+                                                                                 <xs:element name="GreaterThan" type="xs:string"></xs:element>
+                                                                                 <xs:element name="Parameters">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="Parameter" maxOccurs="unbounded">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="Name" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="Value" type="xs:int"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="MaterialDated" type="xs:string"></xs:element>
+                                                                                 <xs:element name="Notes" type="xs:string"></xs:element>
+                                                                                 <xs:element name="PublicationsText" type="xs:string"></xs:element>
+                                                                                 <xs:element name="Publications">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="Publication">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="TaxaDated">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="TaxonDated">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ID" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="Taxon" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="Element" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="Fraction" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="CalAgeMedian" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="CalAgeOlder" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="CalAgeYounger" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="CalibCurve" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="CalibProgram">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="Program" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="Version" type="xs:string"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                           <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                         <xs:attribute name="AnalysisUnitID" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="AgeModels">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="AgeModel">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ChronNumber" type="xs:int"></xs:element>
+                                                               <xs:element name="ChronologyName" type="xs:string"></xs:element>
+                                                               <xs:element name="AgeUnits" type="xs:string"></xs:element>
+                                                               <xs:element name="Default" type="xs:string"></xs:element>
+                                                               <xs:element name="Model" type="xs:string"></xs:element>
+                                                               <xs:element name="AgeBoundOlder" type="xs:int"></xs:element>
+                                                               <xs:element name="AgeBoundYounger" type="xs:int"></xs:element>
+                                                               <xs:element name="PreparersText" type="xs:string"></xs:element>
+                                                               <xs:element name="Preparers">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Contact">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="ChronControls">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="ChronControl" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="ControlType" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="AnalysisUnit" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="Age" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="AgeLimitOlder" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="AgeLimitYounger" type="xs:int"></xs:element>
+                                                                                                   <xs:element name="CalibCurve" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="CalibProgram">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="Program" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="Version" type="xs:string"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="GeochronLinks">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="GeochronLink">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="Notes" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="AnalysisUnitID" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Lithology">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="LithologyUnit">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="DepthTop" type="xs:int"></xs:element>
+                                                               <xs:element name="DepthBottom" type="xs:int"></xs:element>
+                                                               <xs:element name="Description" type="xs:string"></xs:element>
+                                                               <xs:element name="LowerBoundary" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Loss-on-ignition">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="OrganicLOITemp" type="xs:int"></xs:element>
+                                             <xs:element name="CarbonateLOITemp" type="xs:int"></xs:element>
+                                             <xs:element name="LOISamples">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="LOISample">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Depth" type="xs:int"></xs:element>
+                                                                                 <xs:element name="Thickness" type="xs:int"></xs:element>
+                                                                                 <xs:element name="TempOrganic" type="xs:int"></xs:element>
+                                                                                 <xs:element name="LOIOrganic" type="xs:int"></xs:element>
+                                                                                 <xs:element name="TempCarbonate" type="xs:int"></xs:element>
+                                                                                 <xs:element name="LOICarbonate" type="xs:int"></xs:element>
+                                                                                 <xs:element name="BulkDensity" type="xs:int"></xs:element>
+                                                                                 <xs:element name="DateDnalyzed" type="xs:int"></xs:element>
+                                                                                 <xs:element name="Analyst">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="ID" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+ 
